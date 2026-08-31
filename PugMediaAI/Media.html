@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pug</title>
+  <link rel="stylesheet" href="Media.css">
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Header section -->
+    <header class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Companion Breed</p>
+        <h1>Pug</h1>
+        <p class="subtitle">A cheerful, affectionate little dog with a playful personality and a big heart.</p>
+      </div>
+    </header>
+
+    <!-- General information section -->
+    <main class="content">
+      <section class="info-section">
+        <h2>General Information</h2>
+        <p>"Pugs can be wonderful, loving companions, but they require careful consideration regarding their health needs and clingy personalities."</p>
+        <p><strong>Health problems:</strong> Because they are a flat-faced (brachycephalic) breed, Pugs often have breathing troubles, eye sensitivities, and skin fold infections. They also struggle in hot or humid weather.</p>
+      </section>
+
+      <!-- Flexbox cards section -->
+      <section class="cards" aria-label="Pug information and media cards">
+        <article class="card">
+          <h3>Pug Information</h3>
+          <p>Learn more about Pugs and their care needs.</p>
+          <a href="https://www.omlet.us/breeds/dogs/pug/" target="_blank" rel="noopener noreferrer">Learn more about Pugs</a>
+        </article>
+
+        <article class="card">
+          <h3>Pug Image</h3>
+          <a href="https://bestforpet.com.au/pet-advice/pug/" target="_blank" rel="noopener noreferrer" aria-label="Open more information about pugs in a new tab">
+            <img src="pug image.webp" alt="A happy pug dog with a wrinkled face and bright eyes">
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Pug Video</h3>
+          <video controls preload="metadata" playsinline>
+            <source src="pug video.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </article>
+
+        <article class="card location-card">
+          <h3>Find a Pug Shelter Near You</h3>
+          <p>Click the button to get your coordinates.</p>
+          <button type="button" id="geoButton">Get My Location</button>
+          <p id="geoOutput" aria-live="polite"></p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const geoButton = document.getElementById('geoButton');
+    const geoOutput = document.getElementById('geoOutput');
+
+    geoButton.addEventListener('click', function () {
+      if (!navigator.geolocation) {
+        geoOutput.textContent = 'Geolocation is not supported by this browser.';
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(function (position) {
+        geoOutput.innerHTML = 'Latitude: ' + position.coords.latitude + '<br>Longitude: ' + position.coords.longitude;
+      }, function () {
+        geoOutput.textContent = 'Unable to get your location. Please allow location access and try again.';
+      });
+    });
+  </script>
+</body>
+</html>

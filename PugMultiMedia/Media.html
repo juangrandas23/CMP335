@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="Media.css">
+
+</head>
+<body>
+
+<h2>Pug</h2>
+<p><strong>General Information</strong> </p>
+<p>Pugs can be wonderful, loving companions, but they require careful consideration regarding their health needs and clingy personalities. </p>
+<p>Health problems: Because they are a flat-faced (brachycephalic) breed, Pugs often have breathing troubles, eye sensitivities, and skin fold infections. They also struggle in hot or humid weather.</p>
+
+<div class="myflexboxRow">
+  <div class="myflexboxColumn" style="background-color:#aaa;">
+    <h2>Pug information (Omlet link)</h2>
+    <p><a href="https://www.omlet.us/breeds/dogs/pug/" target="_blank">Visit Omlet!</a></p>
+  </div>
+  
+  <div class="myflexboxColumn" style="background-color:#bbb;">
+    <h2>Pug (image)</h2>
+    <!--  Add the alt parameter on the img tag for accessibility purposes! -->
+    <p><a href="https://bestforpet.com.au/pet-advice/pug/"><img src="pug image.webp" alt="Pug" title="My Dog" style="width:50%;"></a></p>
+  </div>
+  
+  <div class="myflexboxColumn" style="background-color:#ccc;">
+    <h2>Pug (video)</h2>
+    <p><video width="50%" controls>
+        <source src="pug video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video></p>
+  </div>
+  
+  <div class="myflexboxColumn" style="background-color:#ddd;">
+    <h2>Get the location for the nearest pug shelter</h2>
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <!-- The Javascript for the Geolocation API is being placed in the flexbox cell where it is used.  
+    This could have also been placed at the start of this file.-->
+    <script>
+       var x = document.getElementById("demo");
+
+       function getLocation() {
+            if (navigator.geolocation) {
+               navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+               x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+
+       function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+  </div>
+</div>
+
+</body>
+</html>
