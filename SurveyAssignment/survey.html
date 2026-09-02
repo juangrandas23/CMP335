@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soccer Player Survey</title>
+
+    <link rel="stylesheet" href="survey.css">
+</head>
+
+<body>
+
+    <h1>Soccer Player Survey</h1>
+
+    <p id="intro">
+        Tell us a little about your soccer experience and training preferences.
+    </p>
+
+    <form>
+
+        <h3>Player Information</h3>
+
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <br><br>
+
+        <label for="position">What position do you play?</label><br>
+
+        <select id="position" name="position" required>
+            <option value="">Choose a position</option>
+            <option value="goalkeeper">Goalkeeper</option>
+            <option value="defender">Defender</option>
+            <option value="midfielder">Midfielder</option>
+            <option value="forward">Forward</option>
+        </select>
+
+        <br><br>
+
+        <h3>Training Preferences</h3>
+
+        <p>How often do you train each week?</p>
+
+        <input type="radio" id="one" name="training" value="1-2 days" required>
+        <label for="one">1-2 days</label><br>
+
+        <input type="radio" id="three" name="training" value="3-4 days">
+        <label for="three">3-4 days</label><br>
+
+        <input type="radio" id="five" name="training" value="5 or more days">
+        <label for="five">5 or more days</label>
+
+        <br><br>
+
+        <p>Which areas would you like to improve?</p>
+
+        <input type="checkbox" id="speed" name="skills" value="Speed">
+        <label for="speed">Speed</label><br>
+
+        <input type="checkbox" id="passing" name="skills" value="Passing">
+        <label for="passing">Passing</label><br>
+
+        <input type="checkbox" id="shooting" name="skills" value="Shooting">
+        <label for="shooting">Shooting</label><br>
+
+        <input type="checkbox" id="fitness" name="skills" value="Fitness">
+        <label for="fitness">Fitness</label>
+
+        <br><br>
+
+        <h3>Comments</h3>
+
+        <label for="comments">
+            What would make your soccer training better?
+        </label><br>
+
+        <textarea
+            id="comments"
+            name="comments"
+            rows="5"
+            placeholder="Write your comments here..."
+            required></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Send Survey">
+
+    </form>
+
+</body>
+
+</html>

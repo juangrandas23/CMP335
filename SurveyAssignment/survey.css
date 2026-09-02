@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f7;
+    width: 50%;
+    margin: 40px auto;
+}
+
+
+h2 {
+    text-align: center;
+    color: darkblue;
+    margin-bottom: 5px;
+}
+
+
+#intro {
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+
+label {
+    font-size: 13px;
+    color: #222222;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+}
+
+
+select {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+}
+
+
+textarea {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 7px;
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 9px;
+}
+
+
+input[type="submit"]:hover {
+    background-color: navy;
+}
