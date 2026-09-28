@@ -1,0 +1,8 @@
+/* Custom CSS for the Random Fox API */
+
+/* Keep the fox image a consistent size */
+#foxImage {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
