@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CT Calculator</title>
+
+    <link rel="stylesheet" href="CalculatorCT.css">
+    <script src="CalculatorCT.js"></script>
+</head>
+
+<body>
+
+    <h1>CT Calculator</h1>
+
+    <div class="calculator">
+
+        <div class="section">
+
+            <h2>Set Range</h2>
+
+            <form name="rangeForm">
+
+                Low Value:
+                <input type="number" name="lowValue" value="">
+                <br /><br />
+
+                High Value:
+                <input type="number" name="highValue" value="">
+                <br /><br />
+
+                <input type="button" value="Set Range" onclick="setRange()">
+
+            </form>
+
+        </div>
+
+        <div class="section">
+
+            <h2>Add Number</h2>
+
+            <form name="myForm">
+
+                Enter a Number:
+                <input type="number" name="newNumber" value="">
+                <br /><br />
+
+                <input type="button" value="Add Number" onclick="validateANDadd()">
+
+            </form>
+
+        </div>
+
+        <div class="section">
+
+            <h2>Results</h2>
+
+            <p id="numbersResult">Numbers:</p>
+
+            <p id="meanResult">Mean:</p>
+
+            <p id="medianResult">Median:</p>
+
+            <p id="modeResult">Mode:</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

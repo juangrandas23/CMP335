@@ -1,0 +1,47 @@
+/* Include padding and borders in the element size */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+/* Center the main heading */
+h1 {
+    text-align: center;
+}
+
+
+/* Container for flexboxes */
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Create three equal sections in the calculator */
+.section {
+    flex: 33%;
+    padding: 20px;
+}
+
+
+/* Add space to the inputs */
+input {
+    margin-top: 5px;
+}
+
+
+/* Media query - on screens that are 600px wide or less, make the sections stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .calculator {
+        flex-direction: column;
+    }
+
+}

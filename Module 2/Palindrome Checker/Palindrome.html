@@ -1,0 +1,79 @@
+<!-- declare document type and language -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head section -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Module 2 Assignment 1 - Palindrome Checker</title>
+
+    <link rel="stylesheet" href="Palindrome.css">
+    <script src="Palindrome.js"></script>
+</head>
+
+<body>
+
+    <h1>Palindrome Checker</h1>
+
+    <!-- flexbox row -->
+    <div class="myflexboxRow">
+
+        <!-- form column -->
+        <div class="myflexboxColumn">
+
+            <h2>Form to check a word</h2>
+
+            <form id="palindromeForm">
+
+                <label for="newWord">Word to check:</label>
+                <input type="text" id="newWord" name="newWord">
+
+                <br><br>
+
+                <label for="newNumber">Algorithm to use (1 or 2):</label>
+                <input type="number" id="newNumber" name="newNumber">
+
+                <br><br>
+
+                <input type="button" value="Check and add to list"
+                    onclick="validateANDcheck()">
+
+            </form>
+
+        </div>
+
+        <!-- algorithm 1 column -->
+        <div class="myflexboxColumn">
+
+            <h2>Algorithm 1</h2>
+
+            <p><strong>(word: palindrome?)</strong></p>
+
+            <ul id="algorithm1Results"></ul>
+
+            <input type="button" value="Clear the list"
+                onclick="clearAlgorithm1()">
+
+        </div>
+
+        <!-- algorithm 2 column -->
+        <div class="myflexboxColumn">
+
+            <h2>Algorithm 2</h2>
+
+            <p><strong>(word: palindrome?)</strong></p>
+
+            <ul id="algorithm2Results"></ul>
+
+            <input type="button" value="Clear the list"
+                onclick="clearAlgorithm2()">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
