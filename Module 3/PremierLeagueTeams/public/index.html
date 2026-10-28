@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Teams</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Page title -->
+    <header>
+        <h1>Premier League Teams</h1>
+    </header>
+
+    <main>
+        <!-- Form to create a new team -->
+        <h2>Add New Team</h2>
+
+        <form id="add-form">
+            <input type="text" id="add-name" placeholder="Team Name" required>
+            <input type="text" id="add-stadium" placeholder="Stadium" required>
+            <input type="text" id="add-city" placeholder="City" required>
+            <button type="submit">Add Team</button>
+        </form>
+
+        <!-- Form to edit an existing team -->
+        <div id="edit-section">
+            <h2>Edit Team</h2>
+
+            <form id="edit-form">
+                <input type="hidden" id="edit-id">
+                <input type="text" id="edit-name" placeholder="Team Name" required>
+                <input type="text" id="edit-stadium" placeholder="Stadium" required>
+                <input type="text" id="edit-city" placeholder="City" required>
+
+                <button type="submit">Save Changes</button>
+                <button type="button" id="cancel-button">Cancel</button>
+            </form>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Stadium</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="teams"></tbody>
+        </table>
+    </main>
+
+    <!-- Connect the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

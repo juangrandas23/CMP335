@@ -1,0 +1,87 @@
+/* General page style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Premier League header */
+header {
+    background-color: #37003c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Section headings */
+h2 {
+    color: #37003c;
+}
+
+/* Forms */
+form {
+    margin-bottom: 25px;
+}
+
+/* Input fields */
+input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #37003c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5b0063;
+}
+
+/* Hide the edit form until needed */
+#edit-section {
+    display: none;
+}
+
+/* Team collection table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* Table headings and cells */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Table header */
+th {
+    background-color: #37003c;
+    color: white;
+}
+
+/* Alternate row colors */
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
