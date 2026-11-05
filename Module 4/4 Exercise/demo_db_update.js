@@ -9,10 +9,9 @@ let con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Connected!");
-  let sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
+  let sql = "UPDATE customers SET address = 'Valley 345' WHERE address = 'Canyon 123'";
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("1 record inserted, ID: " + result.insertId);
+    console.log(result.affectedRows + " record(s) updated");
   });
 });

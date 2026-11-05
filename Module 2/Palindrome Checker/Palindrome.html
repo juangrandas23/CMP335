@@ -1,74 +1,130 @@
-<!-- declare document type and language -->
+<!-- Declare document type and language -->
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- head section -->
+<!-- Head section -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Module 2 Assignment 1 - Palindrome Checker</title>
 
+    <!-- Connect Bootstrap 5.0.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Connect custom CSS -->
     <link rel="stylesheet" href="Palindrome.css">
+
+    <!-- Connect JavaScript -->
     <script src="Palindrome.js"></script>
 </head>
 
 <body>
 
-    <h1>Palindrome Checker</h1>
+    <!-- Bootstrap main container -->
+    <div class="container-fluid my-4">
 
-    <!-- flexbox row -->
-    <div class="myflexboxRow">
+        <!-- Page title -->
+        <h1 class="text-center mb-4">Palindrome Checker</h1>
 
-        <!-- form column -->
-        <div class="myflexboxColumn">
+        <!-- Flexbox row -->
+        <div class="myflexboxRow">
 
-            <h2>Form to check a word</h2>
+            <!-- Form column -->
+            <div class="myflexboxColumn card shadow-sm p-4">
 
-            <form id="palindromeForm">
+                <h2 class="h4">Form to check a word</h2>
 
-                <label for="newWord">Word to check:</label>
-                <input type="text" id="newWord" name="newWord">
+                <form id="palindromeForm"
+                    onsubmit="return validateANDcheck()">
 
-                <br><br>
+                    <!-- Word input -->
+                    <label for="newWord" class="form-label">
+                        Word to check:
+                    </label>
 
-                <label for="newNumber">Algorithm to use (1 or 2):</label>
-                <input type="number" id="newNumber" name="newNumber">
+                    <input type="text" id="newWord" name="newWord"
+                        class="form-control">
 
-                <br><br>
+                    <br>
 
-                <input type="button" value="Check and add to list"
-                    onclick="validateANDcheck()">
+                    <!-- Algorithm number input -->
+                    <label for="newNumber" class="form-label">
+                        Algorithm to use (1, 2, or 3):
+                    </label>
 
-            </form>
+                    <input type="number" id="newNumber" name="newNumber"
+                        min="1" max="3" step="1" class="form-control">
 
-        </div>
+                    <br>
 
-        <!-- algorithm 1 column -->
-        <div class="myflexboxColumn">
+                    <!-- Case sensitivity selection -->
+                    <label for="caseOption" class="form-label">
+                        Case sensitivity:
+                    </label>
 
-            <h2>Algorithm 1</h2>
+                    <select id="caseOption" name="caseOption"
+                        class="form-select">
 
-            <p><strong>(word: palindrome?)</strong></p>
+                        <option value="sensitive">Case Sensitive</option>
+                        <option value="insensitive">Case Insensitive</option>
 
-            <ul id="algorithm1Results"></ul>
+                    </select>
 
-            <input type="button" value="Clear the list"
-                onclick="clearAlgorithm1()">
+                    <br>
 
-        </div>
+                    <!-- Submit button -->
+                    <input type="submit" value="Check and add to list"
+                        class="btn btn-primary w-100">
 
-        <!-- algorithm 2 column -->
-        <div class="myflexboxColumn">
+                </form>
 
-            <h2>Algorithm 2</h2>
+            </div>
 
-            <p><strong>(word: palindrome?)</strong></p>
+            <!-- Algorithm 1 column -->
+            <div class="myflexboxColumn card shadow-sm p-4">
 
-            <ul id="algorithm2Results"></ul>
+                <h2 class="h4">Algorithm 1</h2>
 
-            <input type="button" value="Clear the list"
-                onclick="clearAlgorithm2()">
+                <p><strong>(word: palindrome?)</strong></p>
+
+                <ul id="algorithm1Results"></ul>
+
+                <input type="button" value="Clear the list"
+                    class="btn btn-outline-danger"
+                    onclick="clearAlgorithm1()">
+
+            </div>
+
+            <!-- Algorithm 2 column -->
+            <div class="myflexboxColumn card shadow-sm p-4">
+
+                <h2 class="h4">Algorithm 2</h2>
+
+                <p><strong>(word: palindrome?)</strong></p>
+
+                <ul id="algorithm2Results"></ul>
+
+                <input type="button" value="Clear the list"
+                    class="btn btn-outline-danger"
+                    onclick="clearAlgorithm2()">
+
+            </div>
+
+            <!-- Algorithm 3 column -->
+            <div class="myflexboxColumn card shadow-sm p-4">
+
+                <h2 class="h4">Algorithm 3</h2>
+
+                <p><strong>(word: palindrome?)</strong></p>
+
+                <ul id="algorithm3Results"></ul>
+
+                <input type="button" value="Clear the list"
+                    class="btn btn-outline-danger"
+                    onclick="clearAlgorithm3()">
+
+            </div>
 
         </div>
 

@@ -1,17 +1,55 @@
+/* Apply border-box sizing to all elements */
 * {
     box-sizing: border-box;
+}
+
+/* Style for the entire page */
+body {
+    background-color: #f5f7fa;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the main title */
+h1 {
+    color: #1f3b5b;
+    font-weight: bold;
 }
 
 /* Container for flexboxes */
 .myflexboxRow {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Create three equal entries in myflexbox */
+/* Create equal columns in myflexbox */
 .myflexboxColumn {
-    flex: 33%;
-    padding: 20px;
+    flex: 1 1 240px;
+    min-width: 0;
+}
+
+/* Style for Bootstrap cards */
+.card {
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+}
+
+/* Style for the section titles */
+h2 {
+    color: #234e70;
+    margin-bottom: 20px;
+}
+
+/* Style for the result lists */
+ul {
+    padding-left: 20px;
+    flex-grow: 1;
+    overflow-wrap: anywhere;
+}
+
+/* Add space between results */
+li {
+    margin-bottom: 8px;
 }
 
 /* On smaller screens, stack the columns */
@@ -21,4 +59,8 @@
         flex-direction: column;
     }
 
+    .myflexboxColumn {
+        width: 100%;
+        flex: 1 1 auto;
+    }
 }
